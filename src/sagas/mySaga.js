@@ -43,7 +43,7 @@ function* delSaga({ payload }) {
   }
 }
 
-function* successEditSaga({ payload }) {
+function* EditsuccessSaga({ payload }) {
   try {
     const users = yield call(editUserApi, payload);
     console.log("users ", users);
@@ -66,7 +66,7 @@ function* addSaga() {
 }
 
 function* editSaga() {
-  yield takeEvery(EDIT_USERS_FETCH, successEditSaga);
+  yield takeEvery(EDIT_USERS_FETCH, EditsuccessSaga);
 }
 
 function* deleteSaga() {
